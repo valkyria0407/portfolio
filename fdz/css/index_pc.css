@@ -1,0 +1,764 @@
+@charset "UTF-8";
+@import url(/css/reset.css);
+
+/*------------
+  ページ全体
+------------*/
+html {
+  font-size: 6.25%;
+}
+
+body {
+  color:#202020;
+}
+
+#wrapper {
+  overflow-x:hidden;
+  width:100%;
+}
+
+a {
+  color:#202020;
+  text-decoration:none;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family:"YuGothic-M";
+  src:url("/css/fonts/YuGothic-M.woff")format("woff");
+}
+
+/*------------
+  共通パーツ
+------------*/
+.pc {
+  display:block;
+}
+
+.sp {
+  display:none;
+}
+
+.section_heading {
+  font-family:'Cormorant Garamond', serif;
+  font-size:6.1vw;
+  font-weight:bold;
+}
+
+/*------------
+  ヘッダー
+------------*/
+.main_header {
+  align-items:center;
+  display:flex;
+  height:5.9vw;
+  justify-content:space-between;
+}
+
+.main_header_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.7vw;
+  font-weight:600;
+  letter-spacing:0.15vw;
+  margin-left:1.8vw;
+}
+
+.main_header_nav {
+  align-items:center;
+  display:flex;
+}
+
+.main_header_nav_item {
+  font-family:'Cormorant Garamond', serif;
+  font-size:1vw;
+  font-weight:bold;
+  letter-spacing:0.05em;
+  margin-right:1.7vw;
+}
+
+.main_header_nav_item:last-of-type {
+  margin-right:4.1vw;
+}
+
+.main_header_contact {
+  background-color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.2vw;
+  font-weight:bold;
+  letter-spacing:0.15em;
+  padding:2.7vw 2vw 2.4vw 4.8vw; 
+  text-align:end;
+}
+
+.main_header_contactarea {
+  position:relative;
+}
+
+.main_header_mail_logo {
+  height: 1.4vw;
+  left: -0.5vw;
+  margin-left: 2vw;
+  position: absolute;
+  top: -0.1vw;
+  width: 3vw;
+}
+
+/*------------
+  FV
+------------*/
+.main_fv_inner {
+  text-align:center;
+  padding-top:9vw;
+  position:relative;
+}
+
+.main_fv_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:10.4vw;
+  letter-spacing:0.03em;
+}
+
+.main_fv_sub_title {
+  font-size:1.1vw;
+  line-height:2.4;
+  margin:1.7vw 0 8.7vw;
+}
+
+.main_fv_sub_title .underline {
+  border-bottom:1rem solid #202020;
+  padding-bottom:0.2vw;
+}
+
+.main_fv_sub_title .space {
+  letter-spacing:0.3em;
+}
+
+.main_fv_scroll {
+  color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.2vw;
+  letter-spacing:0.05vw;
+  position:relative;
+}
+
+.main_fv_scroll::before {
+  content: "";
+  position: absolute;
+  top: 2.2vw;
+  left: 1.23vw;
+  width: 0.7vw;
+  height: 0.7vw;
+  border-radius: 50%;
+  background: #222;
+}
+
+.main_fv_scroll::after {
+  content: "";
+  position: absolute;
+  top: 2.7vw;
+  left: 1.5vw;
+  width: 1rem;
+  height: 6vw;
+  background: #222;
+}
+
+.main_fv_copyright {
+  font-family:'Cormorant Garamond', serif;
+  font-size:0.7vw;
+  font-weight:400;
+  left:-3.5vw;
+  position:absolute;
+  top:17vw;
+  transform: rotate(90deg);
+}
+
+.main_fv_sns {
+  align-items:center;
+  display: flex;
+  right:-0.9vw;
+  position:absolute;
+  top:15.3vw;
+  transform: rotate(90deg);
+}
+
+.main_fv_text {
+  font-family:'Cormorant Garamond', serif;
+  font-size:0.84vw;
+  font-weight:400;
+  letter-spacing:0.04vw;
+}
+
+.main_fv_insta_logo {
+  height:1vw;
+  margin-left:2vw;
+  width:1vw;
+}
+
+/*------------
+  CONCEPT
+------------*/
+.main_concept {
+  background-color:#f5f4ee;
+  margin-top:4.5vw;
+}
+
+.main_concept_inner {
+  padding:7vw 0 7vw 13.3vw;
+  width:55vw;
+}
+
+.main_concept_heading {
+  color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.9vw;
+  position:relative;
+}
+
+.main_concept_heading::after {
+  border-bottom: 2rem solid #F8CC19;
+  content:'';
+  left:0.2vw;
+  position:absolute;
+  top:17.2vw;
+  width:4vw;
+}
+
+
+.main_concept_title {
+  font-family:"YuGothic-M";
+  font-size:2.5vw;
+  font-weight:500;
+  line-height:1.6;
+  margin-top:1.2vw;
+  position:relative;
+}
+
+.main_concept_text {
+  font-family:"YuGothic-M";
+  font-size:1.1vw;
+  line-height:2;
+  letter-spacing:0.07vw;
+  margin-top:3.5vw;
+  margin-left:25.5vw;
+}
+
+.main_concept_text.last {
+  margin-top:1.1vw;
+}
+
+/*------------
+  PHILOSOPHY
+------------*/
+.main_phirosophy_inner {
+  padding:12vw 6vw 13.2vw;
+}
+
+.main_phirosophy_heading {
+  font-family:'Cormorant Garamond', serif;
+  font-size:6.15vw;
+  font-weight:bold;
+  position:relative
+}
+
+.main_phirosophy_heading::after {
+  border-bottom: 0.6vw solid #F8CC19;
+  content:'';
+  left:0.2vw;
+  position:absolute;
+  top:8.2vw;
+  width:4vw;
+}
+
+.main_phirosophy_content {
+  display:flex;
+}
+
+.main_phirosophy_small_text {
+  font-family:"YuGothic-M";
+  font-size:1.1vw;
+  font-weight:500;
+  line-height:1.9;
+  margin-left:3vw;
+  margin-top:5.3vw;
+  width:28.5vw;
+}
+
+.main_phirosophy_small_text.second {
+  margin-top:0.9vw;
+}
+
+.main_phirosophy_small_text.last {
+  margin-top:0.6vw;
+}
+
+.main_phirosophy_large_text {
+  font-family:"YuGothic-M";
+  font-size:1.8vw;
+  font-weight:500;
+  letter-spacing:0.05em;
+  line-height:1.8;
+  margin-top:1.6vw;
+  margin-left:3vw;
+  width:33.7vw;
+}
+
+.main_phirosophy_img {
+  height:30vw;
+  margin-left:8vw;
+  margin-top:0.6vw;
+  width:54vw;
+}
+
+/*------------
+  APPROACH
+------------*/
+.main_approach {
+  background-color:#fae265;
+}
+
+.main_approach_inner {
+  display:flex;
+}
+
+.main_approach_img {
+  width:26.4vw;
+}
+
+.main_approach_textarea {
+  text-align:center;
+  padding:9vw 0 9vw 20.6vw;
+  width: 33vw;
+}
+
+.main_approach_heading {
+  position:relative;
+}
+
+.main_approach_heading::after {
+  border-bottom: 2rem solid #222;
+  content:'';
+  left:14.6vw;
+  position:absolute;
+  top:7.9vw;
+  width:4vw;
+}
+
+.main_approach_small_text {
+  font-family:"YuGothic-M";
+  font-size:1.1vw;
+  font-weight:500;
+  letter-spacing:0.1vw;
+  line-height:2;
+  margin-top:5.15vw;
+}
+
+.main_approach_small_text.last {
+  letter-spacing:0.01em;
+  margin-top:1.2vw;
+}
+
+.main_approach_large_text {
+  font-family:"YuGothic-M";
+  font-size:1.75vw;
+  font-weight:500;
+  line-height:1.8;
+  margin-left:1vw;
+  margin-top:2vw;
+}
+
+/*------------
+  OUR VALUE
+------------*/
+.main_value_inner {
+  padding: 12vw 5.7vw;
+}
+
+.main_value_heading {
+  position:relative;
+}
+
+.main_value_heading::after {
+  border-bottom: 2rem solid #F8CC19;
+  content:'';
+  left:0.3vw;
+  position:absolute;
+  top:7.9vw;
+  width:4vw;
+}
+
+.main_value_cassette {
+  border-bottom:1rem solid #807f7a;
+  display:flex;
+  padding:4.7vw 0 5.4vw;
+}
+
+.main_value_cassette.second {
+  padding:4.7vw 0 5.1vw;
+}
+
+.main_value_cassette.last {
+  padding:5.4vw 0 5.8vw;
+}
+
+.main_value_img {
+  height:11vw;
+  margin-top:1.8vw;
+  width:14vw;
+}
+
+.main_value_img.second {
+  margin-top:1.1vw;
+}
+
+.main_value_img.last {
+  margin-top:20rem;
+}
+
+.main_value_process {
+  margin-left:3.9vw;
+  margin-top:2.3vw;
+}
+
+.main_value_process.second {
+  margin-top:2.6vw;
+
+}
+
+.main_value_number {
+  color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.3vw;
+  font-weight:500;
+}
+
+.main_value_large_text {
+  font-family:"YuGothic-M";
+  font-size:1.7vw;
+  font-weight:500;
+  letter-spacing:0.01em;
+  line-height:1.7;
+  margin-top:0.9vw;
+  width:23vw;
+}
+
+.main_value_large_text.second, .main_value_large_text.last {
+  margin-top:0.6vw;
+}
+
+.main_value_text_area {
+  margin-left:7vw;
+  width:37vw;
+}
+
+.main_value_text_area.second {
+  margin-top:10rem;
+}
+
+
+.main_value_small_text {
+  font-family:"YuGothic-M";
+  font-size:1.1vw;
+  font-weight:500;
+  line-height:2;
+}
+
+.main_value_small_text.second {
+  margin-top:1vw;
+}
+
+.main_value_small_text.last {
+  margin-top:0.9vw;
+}
+
+/*------------
+  SERVICE
+------------*/
+.main_service_heading {
+  margin: 0 auto;
+  position:relative;
+  width:24.3vw;
+}
+
+.main_service_heading::after {
+  border-bottom: 2rem solid #F8CC19;
+  content:'';
+  left:10.2vw;
+  position:absolute;
+  top:7.8vw;
+  width:4vw;
+}
+
+.main_service_cassette {
+  display: flex;
+  padding:5.6vw 6.2vw 0;
+}
+
+.main_service_cassette.second {
+  flex-direction:row-reverse;
+  justify-content: flex-end;
+  padding:7.2vw 6.4vw 0;
+}
+
+.main_service_cassette.last {
+  padding:7.3vw 6.3vw 13.2vw;
+}
+
+.main_service_img {
+  height:26.4vw;
+  width:35.5vw;
+}
+
+.main_service_textarea {
+  margin-left:10vw;
+  margin-top:3vw;
+}
+
+.main_service_textarea.second {
+  margin-left:5.7vw;
+  margin-top:3.4vw;
+  width:38.7vw;
+}
+
+.main_service_textarea.last {
+  margin-left:9.7vw;
+  margin-top:3.4vw;
+}
+
+.main_service_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.3vw;
+  font-weight:400;
+  position:relative;
+}
+
+.main_service_title::after {
+  color:#f8cc19;
+  content:'■';
+  font-size:13rem;
+  left:-24rem;
+  position:absolute;
+  top:10rem;
+}
+
+.main_service_title.second::after {
+  top:4rem;
+}
+
+.main_service_title.last::after {
+  left:-23rem;
+  top:5rem;
+}
+
+.main_service_title.second, .main_service_title.last {  
+  font-family:"YuGothic-M";
+  font-size:1.8vw;
+}
+
+.main_service_text {
+  font-family:"YuGothic-M";
+  font-size:1.1vw;
+  font-weight:500;
+  line-height:2;
+  margin-top:2.2vw;
+}
+
+.main_service_text.second {
+  margin-left:0.3vw;
+  margin-top:1.9vw;
+}
+
+.main_service_tags {
+  display:flex;
+  flex-wrap:wrap;
+  margin-left:-0.2vw;
+  margin-top:1.5vw;
+  width:35vw;
+}
+
+.main_service_tag {
+  border: 1rem solid #807f7a; 
+  color:#807f7a;
+  font-size: 0.9vw;
+  margin-right:1vw;
+  margin-top:1vw;
+  padding: 1vw 1vw 0.7vw;
+  width: fit-content;
+}
+
+/*------------
+  FLY ME
+------------*/
+.main_flyMe {
+background-color:#f8cc19;
+height:38.5vw;
+width:77.5%;
+}
+
+.main_flyMe_inner {
+  display:flex;
+  justify-content:space-between;
+}
+
+.main_flyMe_textarea {
+  padding:6.5vw 2.9vw 12vw 6.2vw;
+}
+
+.main_flyMe_textarea_top {
+  display:flex;
+  width:42vw;
+}
+
+.main_flyMe_heading {
+  font-size:5.3vw;
+}
+
+.main_flyMe_large_text {
+  font-family: "YuGothic-M";
+  font-size: 1.5vw;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 0.7vw;
+  margin-left: 3.4vw;
+}
+
+.main_flyMe_small_text {
+  font-family: "YuGothic-M";
+  font-size: 1.1vw;
+  line-height:1.9;
+  margin-left:0.4vw;
+  margin-top:2.4vw;
+  width:27vw;
+}
+
+.main_flyMe_white_text {
+  color:#fff;
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.4vw;
+  margin-left:0.6vw;
+  margin-top:2.8vw;
+}
+
+.main_flyMe_small_text.last {
+  margin-top:1.4vw;
+}
+
+.main_flyMe_img {
+  margin-top:10.5vw;
+  width:49.2vw;
+}
+
+/*------------
+  INFORMATION
+------------*/
+.main_information_inner {
+  margin:16.8vw 6vw 13vw 6vw;
+}
+
+.main_information_top {
+  display:flex;
+  justify-content:space-between;
+}
+
+.main_information_heading {
+  font-size:4vw;
+  letter-spacing:0.1vw;
+  line-height:1.2;
+}
+
+.main_information_contents {
+  width:51.3vw;
+}
+
+.main_information_item {
+  border-bottom:1rem solid #807f7a;
+  display:flex;
+  padding:3vw 0 2.9vw 3.4vw;
+}
+
+.main_information_item.first {
+  padding:1.4vw 0 3vw 3.4vw;
+}
+
+.main_information_key {
+  color:#8f8f8c;
+  font-family: "YuGothic-M";
+  font-size: 1.3vw;
+  line-height:2;
+  width:4.5vw;
+}
+
+.main_information_value {
+  font-family: "YuGothic-M";
+  font-size: 1.3vw;
+  line-height:1.9;
+  margin-left:7.8vw;
+}
+
+.main_information_link {
+  color:#807f7a;
+}
+
+.main_information_text {
+  font-family:"YuGothic-M";
+  font-size:1.45vw;
+  letter-spacing:0.06vw;
+  line-height:2;
+  margin:6.7vw auto;
+  padding-left:3.5vw;
+  text-align:center;
+}
+
+/*------------
+  CONTACT US
+------------*/
+.main_contact_inner {
+  background-image:url("/img/contact.png");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  content:'';
+  display:block;
+  height:30.8vw;
+}
+
+.main_contact_linkarea {
+  margin:0 auto;
+  padding-right:2vw;
+  padding-top:10.3vw;
+  width:33vw;
+}
+
+.main_contact_link {
+  border:1rem solid #fff;
+  display:block;
+  font-family:'Cormorant Garamond', serif;
+  font-size:3.2vw;
+  font-weight:bold;
+  letter-spacing:0.04em;
+  margin:0 auto;
+  padding:3.8vw 0 3.2vw 4.6vw;
+  width:28.9vw;
+}
+
+.main_contact_link_text {
+  color:#fff;
+  position:relative;
+}
+
+.main_contact_copyrightarea {
+  background-color:#3d3c37;
+}
+
+.main_contact_copyright {
+  color:#fff;
+  font-family:'Cormorant Garamond', serif;
+  font-size:0.95vw;
+  font-weight:bold;
+  letter-spacing:0.04em;
+  margin:0 auto;
+  padding:1.7vw 0 2vw 1.5vw;
+  width:16vw;
+}

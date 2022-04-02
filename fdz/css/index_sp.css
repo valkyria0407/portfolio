@@ -1,0 +1,790 @@
+@charset "UTF-8";
+@import url(/css/reset.css);
+
+/*------------
+  ページ全体
+------------*/
+html {
+  font-size: 6.25%;
+}
+
+body {
+  color:#202020;
+}
+
+#wrapper {
+  overflow-x:hidden;
+  width:100%;
+}
+
+a {
+  color:#202020;
+  text-decoration:none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*------------
+  共通パーツ
+------------*/
+.pc {
+  display:none;
+}
+
+.sp {
+  display:block;
+}
+
+.section_heading {
+  font-family:'Cormorant Garamond', serif;
+  font-size:12.2vw;
+  font-weight:bold;
+  margin-top: 16.4vw;
+  text-align:center;
+  width:auto;
+}
+
+
+/*------------
+  ヘッダー
+------------*/
+.main_header {
+  align-items:center;
+  display:flex;
+  height:13vw;
+  justify-content:space-between;
+  position:relative;
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+.main_header_menu_btn {
+  position:fixed;
+  top:1vw;
+  right:0;
+  display: flex;
+  height: 10.1vw;
+  width: 17vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+}
+
+.main_header_menu_btn span,
+.main_header_menu_btn span:before,
+.main_header_menu_btn span:after {
+  content: '';
+  display: block;
+  height: 0.3vw;
+  width: 7vw;
+  background-color: #222;
+  position: absolute;
+}
+
+.main_header_menu_btn span:before {
+  bottom: 8px;
+}
+
+.main_header_menu_btn span:after {
+  top: 8px;
+}
+
+#menu-btn-check:checked ~ .main_header_menu_btn span {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#menu-btn-check:checked ~ .main_header_menu_btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .main_header_menu_btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.main_header_menu_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 80;
+  background-color: #fae265;
+}
+
+#menu-btn-check:checked ~ .main_header_menu_content {
+  left: 0;
+}
+
+.main_header_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:5vw;
+  font-weight:600;
+  letter-spacing:1.5px;
+  margin-left:4.2vw;
+}
+
+.main_header_nav {
+  display:block;
+  margin-top:45vw;
+  text-align:center;
+}
+
+.main_header_nav_item {
+  font-family:'Cormorant Garamond', serif;
+  font-size:8vw;
+  font-weight:bold;
+  letter-spacing:0.05em;
+  margin-right:0;
+  margin-top:12vw;
+}
+
+.main_header_nav_small_item {
+  font-family:'Cormorant Garamond', serif;
+  font-size:6vw;
+  font-weight:bold;
+  letter-spacing:0.05em;
+  margin-right:0;
+  margin-top:14vw;
+}
+
+.main_header_nav_item:last-of-type {
+  margin-right:0;
+}
+
+.main_header_contact {
+  background-color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:16px;
+  font-weight:bold;
+  letter-spacing:0.15em;
+  padding:34px 27px 32px 66px; 
+  text-align:end;
+  width:128px;
+}
+
+.main_header_contactarea {
+  position:relative;
+}
+
+.main_header_mail_logo {
+  height: 18px;
+  left: -7px;
+  margin-left: 26px;
+  position: absolute;
+  top: -1px;
+  width: 40px;
+}
+
+/*------------
+  FV
+------------*/
+.main_fv_inner {
+  text-align:center;
+  padding-top:32vw;
+  position:relative;
+}
+
+.main_fv_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:17.3vw;
+  letter-spacing:0.6vw;
+}
+
+.main_fv_sub_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:3.1vw;
+  line-height:2.4;
+  margin:11vw 0 35vw;
+}
+
+.main_fv_sub_title .underline {
+  border-bottom:1px solid #202020;
+  padding-bottom:0.4vw;
+}
+
+.main_fv_sub_title .space {
+  letter-spacing:0.3em;
+}
+
+.main_fv_scroll {
+  color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:3.6vw;
+  letter-spacing:0.06vw;
+  position:relative;
+}
+
+.main_fv_scroll::before {
+  content: "";
+  position: absolute;
+  top: 7.3vw;
+  left: 3.3vw;
+  width: 2.3vw;
+  height: 2.3vw;
+  border-radius: 50%;
+  background: #222;
+}
+
+.main_fv_scroll::after {
+  content: "";
+  position: absolute;
+  top: 9.7vw;
+  left: 4.5vw;
+  width: 0.1vw;
+  height: 20vw;
+  background: #222;
+}
+
+
+.main_fv_copyright {
+  font-family:'Cormorant Garamond', serif;
+  font-size:10px;
+  font-weight:400;
+  left:-79px;
+  position:absolute;
+  top:57vw;
+  transform: rotate(90deg);
+}
+
+.main_fv_sns {
+  align-items:center;
+  display: flex;
+  right:-7vw;
+  position:absolute;
+  top:102vw;
+  transform: rotate(90deg);
+}
+
+.main_fv_text {
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.9vw;
+  font-weight:400;
+}
+
+.main_fv_insta_logo {
+  height:5vw;
+  margin-left:3vw;
+  width:5vw;
+}
+
+/*------------
+  CONCEPT
+------------*/
+.main_concept {
+  background-color:#f5f4ee;
+  margin-top:14vw;
+}
+
+.main_concept_inner {
+  padding:16.5vw 7vw 19.4vw;
+  width:auto;
+}
+
+.main_concept_heading {
+  color:#f8cc19;
+  font-family:'Cormorant Garamond', serif;
+  font-size:4.6vw;
+}
+
+.main_concept_heading::after {
+  border-bottom: 0.6vw solid #F8CC19;
+  content: '';
+  left: 1vw;
+  position: absolute;
+  top: 45.5vw;
+  width: 8vw;
+}
+
+.main_concept_title {
+  font-family:"YuGothic-M";
+  font-size:5.3vw;
+  font-weight:500;
+  line-height:1.8;
+  margin-top:3.7vw;
+  position:relative;
+}
+
+
+.main_concept_text {
+  font-size:3.5vw;
+  line-height:2;
+  margin-top:16.6vw;
+  margin-left:0;
+  width:auto;
+}
+
+.main_concept_text.last {
+  margin-top:3vw;
+}
+
+/*------------
+  PHILOSOPHY
+------------*/
+.main_phirosophy_inner {
+  padding:17.5vw 5vw 30.3vw;
+}
+
+.main_phirosophy_heading::after {
+  border-bottom: 0.6vw solid #F8CC19;
+  content: '';
+  left: 39vw;
+  position: absolute;
+  top: 17.2vw;
+  width: 8.3vw;
+}
+
+.main_phirosophy_content {
+  display:flex;
+  flex-direction: column-reverse;
+}
+
+.main_phirosophy_small_text {
+  font-family:"YuGothic-M";
+  font-size:3.4vw;
+  font-weight:500;
+  line-height:2;
+  margin-left:2.5vw;
+  margin-top:11.5vw;
+  width:auto;
+}
+
+.main_phirosophy_small_text.second, .main_phirosophy_small_text.last {
+  margin-top:3.5vw;
+}
+
+.main_phirosophy_large_text {
+  font-family:"YuGothic-M";
+  font-size:5.3vw;
+  font-weight:500;
+  letter-spacing:0;
+  line-height:1.6;
+  margin-top:8vw;
+  margin-left:0;
+  width:auto;
+}
+
+.main_phirosophy_img {
+  height: 60vw;
+  margin-left: 3vw;
+  margin-top: 16vw;
+  width: 84.4vw;
+}
+
+/*------------
+  APPROACH
+------------*/
+.main_approach_inner {
+  display:flex;
+  flex-direction:column-reverse;
+  width:auto;
+}
+
+.main_approach_img {
+  height:32vw;
+  width:auto;
+}
+
+.main_approach_textarea {
+  padding:6.4vw 7.2vw 18.7vw;
+  text-align:center;
+  width:auto;
+}
+
+.main_approach_heading::after {
+  border-bottom: 0.6vw solid #222;
+  content: '';
+  left: 38.4vw;
+  position: absolute;
+  top: 17.2vw;
+  width: 9vw;
+}
+
+.main_approach_small_text {
+  font-family:"YuGothic-M";
+  font-size:3.25vw;
+  font-weight:500;
+  letter-spacing:0.2vw;
+  line-height:2;
+  margin-top:13.5vw;
+}
+
+.main_approach_small_text.last {
+  letter-spacing:0.2vw;
+  margin-top:3.4vw;
+}
+
+.main_approach_large_text {
+  font-size:5.18vw;
+  letter-spacing:0em;
+  line-height:1.8;
+  margin-left:0;
+  margin-top:7.8vw;
+}
+
+/*------------
+  OUR VALUE
+------------*/
+.main_value_inner {
+  padding:17vw 7.3vw 0;
+}
+
+.main_value_heading::after {
+  border-bottom: 0.6vw solid #F8CC19;
+  content: '';
+  left: 38.6vw;
+  position: absolute;
+  top: 17.3vw;
+  width: 8.5vw;
+}
+
+.main_value_cassette {
+  border-bottom:1px solid #807f7a;
+  display:block;
+  padding:16vw 0 14.4vw;
+}
+
+.main_value_cassette.second {
+  padding:15.4vw 0 14.4vw;
+}
+
+.main_value_cassette.last {
+  padding:73px 0 82px;
+}
+
+.main_value_img {
+  display:block;
+  height:150px;
+  margin:0 auto;
+  width:190px;
+}
+
+.main_value_img.second {
+  margin-top:0;
+}
+
+.main_value_img.last {
+  margin:0 auto;
+}
+
+.main_value_process {
+  margin-left:0;
+  margin-top:34px;
+}
+
+.main_value_process.second {
+  margin-top:9.5vw;
+}
+
+.main_value_number {
+  font-size:31px;
+  font-weight:500;
+  text-align:center;
+}
+
+.main_value_large_text {
+  font-size:20px;
+  letter-spacing:0.01em;
+  line-height:1.6;
+  margin-top:17px;
+  width:auto;
+}
+
+.main_value_large_text.second, .main_value_large_text.last {
+  margin-top:4vw;
+}
+
+.main_value_text_area {
+  margin-left:0;
+  margin-top:18px;
+  width:auto;
+}
+
+.main_value_small_text {
+  font-size:3.4vw;
+}
+
+.main_value_text_area.second {
+  margin-top:5vw;
+}
+
+.main_value_small_text.second {
+  margin-top:3vw;
+}
+
+.main_value_small_text.last {
+  margin-top:3vw;
+}
+
+/*------------
+  SERVICE
+------------*/
+.main_service_heading::after {
+  border-bottom: 0.6vw solid #F8CC19;
+  content: '';
+  left: 45.5vw;
+  position: absolute;
+  top: 17vw;
+  width: 9vw;
+}
+
+.main_service_cassette {
+  display:block;
+  padding:15.6vw 7.4vw 0;
+}
+
+.main_service_cassette.second {
+  padding:21.1vw 7.4vw 0;
+}
+
+.main_service_cassette.last {
+  padding:21.1vw 7.4vw;
+}
+
+.main_service_img {
+  display:block;
+  margin:0 auto;
+  height:53.4vw;
+  width:72vw;
+}
+
+.main_service_textarea {
+  margin-left:0;
+  margin-top:10.2vw;
+}
+
+.main_service_textarea.second, .main_service_textarea.last {
+  margin-left:0;
+  margin-top:33px;
+  width:auto;
+}
+
+.main_service_title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:8.6vw;
+  font-weight:400;
+  padding-left:6vw;
+  position:relative;
+}
+
+.main_service_title::after {
+  color:#f8cc19;
+  content:'■';
+  font-size:3.4vw;
+  left:-0.1vw;
+  position:absolute;
+  top:2.7vw;
+}
+
+.main_service_title.second::after, .main_service_title.last::after {
+  top:4px;
+  left:-2px;
+}
+
+.main_service_title.second, .main_service_title.last {  
+  font-size:20px;
+}
+
+.main_service_text {
+  font-family:"YuGothic-M";
+  font-size:3.3vw;
+  font-weight:500;
+  line-height:1.9;
+  margin-top:7.1vw;
+}
+
+.main_service_text.second {
+  margin-left:4px;
+  margin-top:26px;
+}
+
+.main_service_tags {
+  margin-left:0;
+  margin-top:2.3vw;
+  width:auto;
+}
+
+.main_service_tag {
+  border:1px solid #807f7a; 
+  color:#807f7a;
+  font-size:3vw;
+  margin-right:12px;
+  margin-top:14px;
+  padding:3vw 4vw 3.2vw
+  ;
+  width: fit-content;
+}
+
+/*------------
+  FLY ME
+------------*/
+.main_flyMe {
+background-color:#f8cc19;
+height:auto;
+width:auto;
+}
+
+.main_flyMe_inner {
+  display:block;
+  justify-content:start;
+  padding:22.3vw 3.2vw 0;
+}
+
+.main_flyMe_textarea {
+  padding:0;
+}
+
+.main_flyMe_textarea_top {
+  display:block;
+  width:auto;
+}
+
+.main_flyMe_heading {
+  font-size:46px;
+  margin:0;
+}
+
+.main_flyMe_large_text {
+  font-family: "YuGothic-M";
+  font-size: 5.3vw;
+  font-weight: 500;
+  letter-spacing: 0.0001em;
+  line-height: 1.6;
+  margin-top: 7vw;
+  margin-left: 0px;
+  text-align:center;
+}
+
+.main_flyMe_small_text {
+  font-size:3.7vw;
+  line-height:1.9;
+  margin-left:0;
+  margin-top:4.2vw;
+  padding:0 4vw;
+  width:auto;
+}
+
+.main_flyMe_white_text {
+  color:#fff;
+  font-family:'Cormorant Garamond', serif;
+  font-size:8vw;
+  margin-left:0px;
+  margin-top:10vw;
+  text-align:center;
+}
+
+.main_flyMe_small_text.last {
+  margin-top:3vw;
+}
+
+.main_flyMe_img {
+  height:61vw;
+  margin-top:16.7vw;
+  width:93vw;
+}
+
+/*------------
+  INFORMATION
+------------*/
+.main_information_inner {
+  margin:0;
+  padding:15vw 7.4vw 0;
+}
+
+.main_information_top {
+  display:block;
+  justify-content:space-between;
+}
+
+.main_information_heading {
+  font-size:8.6vw;
+  letter-spacing:0.07vw;
+  line-height:1.3;
+}
+
+.main_information_contents {
+  width:auto;
+}
+
+.main_information_item {
+  border-bottom:1px solid #807f7a;
+  display:flex;
+  padding:6vw 0;
+}
+
+.main_information_item.first {
+  padding:11vw 0 6vw;
+}
+
+.main_information_key {
+  font-size: 4vw;
+  line-height:1.9;
+  width:16vw;
+}
+
+.main_information_value {
+  font-size: 15px;
+  line-height:1.9;
+  margin-left:20px;
+}
+
+.main_information_link {
+  color:#807f7a;
+}
+
+.main_information_text {
+  font-size:4.3vw;
+  letter-spacing:0.01em;
+  line-height:2;
+  margin:13vw auto 35.4vw;
+  padding-left:0;
+  text-align:center;
+  width:auto;
+}
+
+/*------------
+  CONTACT US
+------------*/
+.main_contact_inner {
+  background-image:url("/img/contact.png");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  content:'';
+  display:block;
+  height:74.4vw;
+}
+
+.main_contact_linkarea {
+  margin:0 auto;
+  padding-right:0;
+  padding-top:24vw;
+  width:auto;
+}
+
+.main_contact_link {
+  border:1px solid #fff;
+  display:block;
+  font-size:8.3vw;
+  font-weight:bold;
+  letter-spacing:0.04em;
+  margin:0 auto;
+  padding:6.2vw 8vw 6vw 9vw;
+  width:67vw;
+}
+
+.main_contact_copyright {
+  color:#fff;
+  font-family:'Cormorant Garamond', serif;
+  font-size:3.3vw;
+  font-weight:bold;
+  letter-spacing:0.04em;
+  margin:0 auto;
+  padding:5vw 0 4vw 8vw;
+  width:60vw;
+}
